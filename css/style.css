@@ -318,6 +318,33 @@ nav ul a:hover li{
     width: 32px;
 }
   
+.scrollUpArrowWrapper{
+    z-index: 10;
+    position: fixed;
+    bottom: 60px;
+    right: 45px;
+    display: flex;
+    flex-direction: column;
+    width: 32px;
+    transition: margin 0.2s;
+}
+
+.scrollUpArrow{
+    width: 32px;
+    height: 32px;
+    transform: rotate(180deg);
+    transition: margin-bottom 0.2s;
+}
+
+
+.scrollUpArrowWrapper a:hover .scrollUpArrow{
+    margin-bottom: 8px;
+}
+
+.scrollUpArrowWrapper a:active .scrollUpArrow{
+    margin-bottom: 50px;
+}
+
 .navMediaIcons div{
     padding-top: 80px;
 }
@@ -467,6 +494,24 @@ nav ul a:hover li{
     margin-left: var(--margin-inline-contentWrapper) ;
     margin-right: var(--margin-inline-contentWrapper);
 }
+
+.youtubeVideoWrapper {
+    margin-top: var(--margin-small-content-gap);
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    
+}
+  
+.youtubeVideoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 .alignCenter{
     display: flex;
@@ -640,13 +685,6 @@ hr{
     padding-bottom: 56.25%;
 }
     
-iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 .videoBig{
     margin-top: var(--margin-small-content-gap);
@@ -774,6 +812,9 @@ iframe{
     background-color: #575D90;
     border-color: #444074;
 }
+.scrollBtn{
+    display: none;
+}
 
 @media screen and (max-width: 1440px) {
     :root {
@@ -798,6 +839,12 @@ iframe{
     }
     .gradientBgHeader{
         display: block;
+    }
+    .scrollBtn{
+        display: block;
+    }
+    .scrollUpArrowWrapper{
+        display: none;
     }
 
 }

@@ -26,14 +26,19 @@
             </nav>
 
         <div class="navMediaIcons">
-            <a href="" class="mediaIconLink">
+            <a href="mailto:l.jaredic22@gmail.com" target="_blank" class="mediaIconLink">
                 <div class="mediaIconVisual dropShadow" id="mediaIconMail"></div>
             </a>
-            <a href="" class="mediaIconLink">
+            <a href="https://www.instagram.com/luka_digital_arts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="mediaIconLink">
                 <div class="mediaIconVisual dropShadow" id="mediaIconIg"></div>
             </a>
-            <a href="" class="mediaIconLink">
+            <a href="https://www.linkedin.com/in/luka-jaredić-a3820a2a4/" target="_blank" class="mediaIconLink">
                 <div class="mediaIconVisual dropShadow" id="mediaIconLinkedin"></div>
+            </a>
+        </div>
+        <div class="scrollUpArrowWrapper">
+            <a href="#hero">
+                <img class="scrollUpArrow" src="../vectors/Arrow.svg" alt="">
             </a>
         </div>
     </header>
@@ -68,20 +73,22 @@
             </div>  
         </div>
         <div class="arrowWrapper arrowProjectPage">
-            <img class="arrow" src="../vectors/Arrow.svg" alt="">
+            <a href="#gameplay">
+                <img class="arrow" src="../vectors/Arrow.svg" alt="">
+            </a>
         </div>
     </section>
     
     <div class="alignCenter">
-        <section class="contentWrapper" id="personalProjects">
+        <section class="contentWrapperYT" id="gameplay">
             <div class="sectionTitle sectionTitlePaddingTop">
                 <hr>
                 <h4>Gameplay</h4>
                 <hr>
             </div>
-            <video class="videoBig" controls poster="">
-                <source src="../videos/P gameplay.mp4" type="video/mp4">
-            </video>
+            <div class="youtubeVideoWrapper">
+                <iframe width="1271" height="715" src="https://www.youtube.com/embed/ivAmEbywlnY" title="Purification gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div> 
         </section>
 
         <section class="contentWrapper" id="personalProjects">
@@ -140,7 +147,7 @@
                     <h3>Making the Sounds</h3>
                     <p>I aimed to create all the sounds for this project from scratch. I utilized recordings of my voice and generated sounds from sine waves. These sounds were then edited with various effects and layered to achieve the desired auditory representation of the in-game events.</p>
                 </div>
-                <video class="videoNoMargin splitContentVideo" controls poster="">
+                <video class="videoNoMargin splitContentVideo" controls poster="../images/Thumbnails/P sound effects tn.jpg">
                     <source src="../videos/P sound effects.mp4" type="video/mp4">
                 </video> 
             </div>
@@ -160,41 +167,40 @@
             </div>
         </section>
   
-    <footer>
-        <section class="contentWrapper sectionWithABackground" id="contact">
-            <div class="sectionBg"></div>
-            <div class="contentFlexV contactFlexGap">
-                <div class="contentFlexV">
-                    <h1 class="sectionTitlePaddingTop">Let's get in touch</h1>
-                    <p class="pAdaptivePhone">Seeking new opportunities to channel my passion into creating captivating experiences.<br><br class="brAdaptive">Feel free to contact me if you have any questions or job/internship offers.</p>
-                </div>
-                <div class="contentFlexH aboutContentWide aboutHorizontalAdaptive">
-                    <div class="contatcIconWrapperV contactIconsGap">
-                        <a href="" class="mediaIconLink contatcIconWrapper">
-                            <div class="mediaIconVisual dropShadow contactIcon" id="mediaIconMail"></div>
-                            <p>l.jaredic@gmail.com</p>
-                        </a>
-                        <a href="" class="mediaIconLink contatcIconWrapper">
-                            <div class="mediaIconVisual dropShadow contactIcon" id="mediaIconIg"></div>
-                            <p>l.jaredic@gmail.com sdadsa</p>
-                        </a>
-                        <a href="" class="mediaIconLink contatcIconWrapper">
-                            <div class="mediaIconVisual dropShadow contactIcon" id="mediaIconLinkedin"></div>
-                            <p>l.jaredic@gmail.com</p>
-                        </a>
+        <footer>
+            <section class="contentWrapper sectionWithABackground" id="contact">
+                <div class="sectionBg contactBg"></div>
+                <div class="contentFlexV contactBgAdaptiveHeight contactFlexGap">
+                    <div class="contentFlexV">
+                        <h1 class="sectionTitlePaddingTop">Let's get in touch</h1>
+                        <p class="pAdaptivePhone">Seeking new opportunities to channel my passion into creating captivating experiences.<br><br class="brAdaptive">Feel free to contact me if you have any questions or job/internship offers.</p>
                     </div>
-                    <a href="#hero">
-                        <button class="btnDark" id="backToTopBtn">
-                            Back to top
-                        </button>
-                    </a>
-                    
+                    <div class="contentFlexH aboutContentWide aboutHorizontalAdaptive">
+                        <div class="contatcIconWrapperV contactIconsGap">
+                            <a href="mailto:l.jaredic22@gmail.com" target="_blank" class="mediaIconLink contatcIconWrapper">
+                                <div class="mediaIconVisual dropShadow contactIcon" id="mediaIconMail"></div>
+                                <p>l.jaredic22@gmail.com</p>
+                            </a>
+                            <a href="https://www.instagram.com/luka_digital_arts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="mediaIconLink contatcIconWrapper">
+                                <div class="mediaIconVisual dropShadow contactIcon" id="mediaIconIg"></div>
+                                <p>luka_digital_arts</p>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luka-jaredić-a3820a2a4/" target="_blank" class="mediaIconLink contatcIconWrapper">
+                                <div class="mediaIconVisual dropShadow contactIcon" id="mediaIconLinkedin"></div>
+                                <p>Luka Jaredić</p>
+                            </a>
+                        </div>
+                        <a href="#hero">
+                            <button class="btnDark scrollBtn" id="backToTopBtn">
+                                Back to top
+                            </button>
+                        </a>
+                        
+                    </div>
+                    <p>© <b>Luka Jaredić</b> 2024.</p>
                 </div>
-                <p>@ Luka Jaredić</p>
-            </div>
-            
-        </section>  
-    </footer>
+            </section>  
+        </footer>
     </div>
     
 
