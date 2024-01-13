@@ -18,6 +18,47 @@ body {
     overflow: overlay;
 }
 
+body.loading {
+    overflow: hidden;
+}
+
+.loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-dark); /* Semi-transparent white background */
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-small-content-gap);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of other content */
+    transition: all 1s;
+}
+.loadingScreenHidden{
+    top: -2000px;
+}
+.loadingImg {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    background-image: url('../vectors/Logo.svg'); /* Add your vector image */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: rotate 4s linear infinite; /* Add a rotating animation */
+}
+  
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
 h1{
     font-family: "Teko", sans-serif;
     color: var(--color-white);
@@ -316,6 +357,17 @@ nav ul a:hover li{
     display: flex;
     flex-direction: column;
     width: 32px;
+    transition: left 0.5s;
+}
+.navMediaHidden {
+    z-index: 5;
+    position: fixed;
+    bottom: 60px;
+    left: -60px;
+    display: flex;
+    flex-direction: column;
+    width: 32px;
+    transition: left 0.5s;
 }
   
 .scrollUpArrowWrapper{
@@ -326,23 +378,28 @@ nav ul a:hover li{
     display: flex;
     flex-direction: column;
     width: 32px;
-    transition: margin 0.2s;
+    transition: bottom 0.5s;
+    display: block;
+}
+.scrollUpArrowWrapperHidden{
+    bottom: -60px;
+    
 }
 
 .scrollUpArrow{
     width: 32px;
     height: 32px;
     transform: rotate(180deg);
-    transition: margin-bottom 0.2s;
+    transition: margin-bottom 0.1s;
 }
 
 
 .scrollUpArrowWrapper a:hover .scrollUpArrow{
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .scrollUpArrowWrapper a:active .scrollUpArrow{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .navMediaIcons div{
@@ -844,9 +901,11 @@ hr{
         display: block;
     }
     .scrollUpArrowWrapper{
-        display: none;
+        bottom: -60px;
     }
-
+    .contentWrapperYT{
+        width: calc(100% - (var(--margin-inline-contentWrapper) *2));
+    }
 }
 
 @media screen and (max-width: 980px) {
