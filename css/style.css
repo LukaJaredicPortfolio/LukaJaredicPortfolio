@@ -138,14 +138,19 @@ a li{
     margin: 0;
     padding: 0;
 }
-
+a{
+    color: var(--color-white);
+}
 a:link { text-decoration: none; }
 
 
 a:visited { text-decoration: none; }
 
 
-a:hover { text-decoration: none; }
+a:hover { 
+    text-decoration: none; 
+    color: var(--color-accent);
+}
 
 
 a:active { text-decoration: none; }
@@ -875,7 +880,9 @@ hr{
 .scrollBtn{
     display: none;
 }
-
+.smallMarginTop{
+    margin-top: var(--margin-small-content-gap);
+}
 @media screen and (max-width: 1440px) {
     :root {
         --margin-inline-contentWrapper: 20px;

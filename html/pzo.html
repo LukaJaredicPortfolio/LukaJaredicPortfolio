@@ -67,6 +67,10 @@
                     <p>3 months</p>
                 </div>
                 <div class="contentFlexH heroTextGapH">
+                    <p><b>Project Made:</b></p>
+                    <p>2023</p>
+                </div>
+                <div class="contentFlexH heroTextGapH">
                     <p><b>Game Engine:</b></p>
                     <p>Unity</p>
                 </div>
@@ -92,14 +96,20 @@
     
     <div class="alignCenter">
         <section class="contentWrapperYT " id="gameplay">
-            <div class="sectionTitle sectionTitlePaddingTop">
+            <div class="sectionTitle sectionTitlePaddingTop sectionTitlePaddingBot">
                 <hr>
-                <h4>Gameplay</h4>
+                <h4>Introduction</h4>
                 <hr>
             </div>
+            
+            <p>
+                Potraga za Obrazom is a third person action-advanture game that follows the story of three high school friends from Podgorica who engage in heists together.
+            <br><br>
+            This game is a passion project of my brother and me, it came about from late night ramblings of my brother about his school trip where he came up with the Grujica Locksmith character. Later on we made a story around on Grujica, Nabi and Pero and that’s what I based my game around. My brother <a href="https://www.instagram.com/thecryingname?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">(TheCryingName)</a> made sound tracks for the game and we even recorded rap songs on top of those tracks that can be found in game. He also helped me record all of the dialogue for the game. Game design, modeling, animation, scripting and everything else was done by me. </p>
             <div class="youtubeVideoWrapper">
                 <iframe width="1271" height="715" src="https://www.youtube.com/embed/lLRVwcEdgXk" title="Potraga za obrazom demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+            
             
         </section>
 
@@ -179,7 +189,7 @@
         <div class="contentFlexV">
             <div class="aboutContentWide">
                 <h3>Modeling</h3>
-                <p>I wanted to recreate the downtown area of Podgorica, particularly around Independence Square, where I spent a lot of time growing up. To ensure accuracy, I used Google Maps projections as references for the proportions of the streets and buildings. Additionally, I created models for repeatable objects within the scene.</p>
+                <p>Location of the game is set in the downtown area of Podgorica, particularly around Independence Square, where I spent a lot of time growing up. To ensure accuracy, I used Google Earth projections as a references for the proportions of the streets and buildings. Environment consists of before mentioned downtown area of Podgorica and 3 interior locations. </p>
             </div>
             <div class="contentFlexV">
                 <div class="contentFlexH aboutContentWide HorizontalAdaptive">
@@ -193,7 +203,7 @@
         <div class="contentFlexV betweenTitlesMargins">
             <div class="aboutContentWide">
                 <h3>Environment in Unity</h3>
-                <p>I transfered the models to Unity and configured the lighting for the scene. I used HDRP with volumetric fog, along with a combination of baked-in and real-time lights to achieve the desired visual effects.</p>
+                <p>After transfering the models to Unity and configuring the lighting, the scene was ready. I used HDRP with volumetric fog, along with a combination of baked-in and real-time lights to achieve the desired visual effects.</p>
             </div>
             
         </div>
@@ -201,27 +211,6 @@
         <div class="youtubeVideoWrapper">
             <iframe width="1271" height="715" src="https://www.youtube.com/embed/7cdy3XnoIrE" title="Potraga za Obrazom Environment showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div> 
-
-        <div class="splitContentWrapper aboutContentWide aboutContentGap HorizontalAdaptive">
-            <div class="splitContentText betweenTitlesMarginsAdaptive">
-                <h3>Light Optimization</h3>
-                <p>In order to manage the performance impact of numerous street lights in the scene while maintaining the volumetric fog effect, I implemented an optimization strategy. I baked the lights into the scene and used a cone with a shader to simulate the volumetric effect. When the player approaches the light, the real-time light activates, allowing the player to observe the genuine volumetric effect when the camera is positioned under the light.</p>
-            </div>
-            <video class="videoNoMargin splitContentVideo" autoplay muted loop poster="">
-                <source src="../videos/PZO street lights.mp4" type="video/mp4">
-            </video> 
-        </div>
-
-        <div class="splitContentWrapper aboutContentWide aboutContentGap splitContentFlip">
-            <div class="splitContentText betweenTitlesMarginsAdaptive">
-                <h3>Cars</h3>
-                <p>I developed a straightforward system for spawning cars, which involves selecting a car model, car sound, spawn time, and a preset path for the car to follow. Additionally, the cars are programmed to detect when a player is in their path and they sound their horn. If a player fails to move out of the way they will get run over.</p>
-            </div>
-            <video class="videoNoMargin splitContentVideo" autoplay muted loop poster="">
-                <source src="../videos/PZO Car.mp4" type="video/mp4">
-            </video> 
-        </div>
-
         <div class="splitContentWrapper aboutContentWide aboutContentGap">
             <div class="splitContentText betweenTitlesMarginsAdaptive">
                 <h3>Bonglice Newsstand</h3>
@@ -251,6 +240,27 @@
                 <source src="../videos/PZO Bolex.mp4" type="video/mp4">
             </video> 
         </div>
+        <div class="splitContentWrapper aboutContentWide aboutContentGap HorizontalAdaptive splitContentFlip">
+            <div class="splitContentText betweenTitlesMarginsAdaptive">
+                <h3>Light Optimization</h3>
+                <p>In order to manage the performance impact of numerous street lights in the scene while maintaining the volumetric fog effect, I implemented an optimization strategy. The lights were baked into the scene and a cone was used with a shader to simulate the volumetric effect. When the player approaches the light, the real-time light activates, allowing the player to observe the genuine volumetric effect when the camera is positioned under the light.</p>
+            </div>
+            <video class="videoNoMargin splitContentVideo" autoplay muted loop poster="">
+                <source src="../videos/PZO street lights.mp4" type="video/mp4">
+            </video> 
+        </div>
+
+        <div class="splitContentWrapper aboutContentWide aboutContentGap ">
+            <div class="splitContentText betweenTitlesMarginsAdaptive">
+                <h3>Cars</h3>
+                <p>The game was looking a bit lifeless, so a straightforward system for spawning cars was added. The system involves randomly selecting a car model, car sound, spawn time, and a preset path for the car to follow. Additionally, the cars are programmed to detect when a player is in their path and they sound their horn. If a player fails to move out of the way they can get run over.</p>
+            </div>
+            <video class="videoNoMargin splitContentVideo" autoplay muted loop poster="">
+                <source src="../videos/PZO Car.mp4" type="video/mp4">
+            </video> 
+        </div>
+
+        
     </section>
     
     <section class="contentWrapper" id="Tutorial">
@@ -263,7 +273,7 @@
         <div class="splitContentWrapper aboutContentWide aboutContentGap splitContentFlip">
             <div class="splitContentText">
                 <h3>Tutorial System</h3>
-                <p>I made an intuitive tutorial system designed to seamlessly teach players about the game's controls and mechanics throughout the gameplay, fostering a more immersive and informative gaming experience.</p> 
+                <p>The tutorial system aims to seamlessly teach players about the game's controls and mechanics throughout the gameplay, fostering a more immersive and informative gaming experience. Players learn about the game mechanics as they come across them, with explanations provided in a straightforward and non-disruptive manner.</p> 
             </div>
             <video class="videoNoMargin splitContentVideo" autoplay muted loop poster="">
                 <source src="../videos/PZO Tutorial.mp4" type="video/mp4">
@@ -291,7 +301,7 @@
         <div class="splitContentWrapper aboutContentWide aboutContentGap splitContentFlip">
             <div class="splitContentText betweenTitlesMarginsAdaptive">
                 <h3>Music Player</h3>
-                <p>The music menu opens up a mobile phone with a music player where you can listen to a full version of the songs you’ve encountered in game. Initially, these songs are locked and can only be played once you complete specific missions.</p> 
+                <p>The music menu opens up a mobile phone with a music player where you can listen to the full version of the songs you’ve encountered in game. Initially, these songs are locked and can only be played once you complete specific missions.</p> 
             </div>
             <video class="videoNoMargin splitContentVideo" autoplay muted loop poster="">
                 <source src="../videos/PZO Music UI.mp4" type="video/mp4">
