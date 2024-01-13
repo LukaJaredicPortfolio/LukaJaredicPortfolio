@@ -40,6 +40,9 @@ body.loading {
 .loadingScreenHidden{
     top: -2000px;
 }
+.loadingScreenRemove{
+    display: none;
+}
 .loadingImg {
     width: 100px; /* Adjust the size as needed */
     height: 100px; /* Adjust the size as needed */
