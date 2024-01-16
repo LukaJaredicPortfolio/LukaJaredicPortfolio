@@ -385,7 +385,7 @@ nav ul a:hover li{
     right: 45px;
     display: flex;
     flex-direction: column;
-    width: 32px;
+    
     transition: bottom 0.5s;
     display: block;
 }
@@ -398,7 +398,7 @@ nav ul a:hover li{
     width: 32px;
     height: 32px;
     transform: rotate(180deg);
-    transition: margin-bottom 0.1s;
+    transition: margin-bottom 0.1s, width 0.1s, height 0.1s;
 }
 
 
@@ -407,7 +407,7 @@ nav ul a:hover li{
 }
 
 .scrollUpArrowWrapper a:active .scrollUpArrow{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .navMediaIcons div{
@@ -424,6 +424,7 @@ nav ul a:hover li{
 
 #mediaIconMail{
     background-image: url(../vectors/GmailIcon.svg);
+    
 }
 
 .mediaIconVisual{
@@ -883,6 +884,9 @@ hr{
 .smallMarginTop{
     margin-top: var(--margin-small-content-gap);
 }
+.contactP{
+    width: 100%;
+}
 @media screen and (max-width: 1440px) {
     :root {
         --margin-inline-contentWrapper: 20px;
@@ -1136,7 +1140,7 @@ hr{
         display: block;
     }
     .pAdaptivePhone{
-        max-width: 370px;
+        max-width: 407px;
     }
     .projectPageImg2{
         margin-top: var(--margin-small-content-gap);
