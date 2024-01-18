@@ -285,23 +285,21 @@ button.btnAccent{
 }
 
 .logo a #logoImg{
-    /* background-color: var(--color-accent); */
     background-image: url(../vectors/Logo.svg);
-    /* -webkit-mask:url(../vectors/Logo.svg) center no-repeat;
-    mask: url(../vectors/Logo.svg) center no-repeat; */
     height: 43px;
     width: 48px;
-    /* background: var(--color-white);
-    background: radial-gradient(circle, var(--color-white) 0%, var(--color-white) 0.1%, var(--color-accent) 0.1%); */
     background-size: 100%;
     background-position: center;
     background-repeat:no-repeat;
     transition: all 0.5s;
     transition-timing-function: ease-out;
 }
-/* .logo a:hover #logoImg{
-    background-size: 140000%;
-} */
+.logo a #logoImg path{
+    fill: var(--color-accent);
+}
+.logo a:hover #logoImg path{
+    fill: var(--color-white);
+}
 
 .dropShadow{
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.75));
@@ -323,7 +321,7 @@ nav ul a li {
     position: relative;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
     color: var(--color-white);
-    transition: color 0.2s;
+    
     display: flex;
     align-items: center;
     justify-content: right;
@@ -347,15 +345,13 @@ nav ul a:hover li{
     margin-left: 10px;
     width: 14px;
     height: 14px;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-color: var(--color-white); */
-    
-    transition: background-color 0.2s;
 }
-/* nav ul a:hover li .navIcon{
-    background-color: var(--color-accent);
-} */
+.navIcon path{
+    fill: var(--color-gray);
+}
+nav ul a:hover li .navIcon path{
+    fill: var(--color-accent);
+}
   
 .navMediaIcons {
     z-index: 5;
@@ -366,6 +362,7 @@ nav ul a:hover li{
     flex-direction: column;
     width: 32px;
     transition: left 0.5s;
+    gap: var(--margin-small-content-gap);
 }
 .navMediaHidden {
     z-index: 5;
@@ -399,53 +396,55 @@ nav ul a:hover li{
     height: 32px;
     transform: rotate(180deg);
     transition: margin-bottom 0.1s, width 0.1s, height 0.1s;
+    fill: var(--color-white)
+    
 }
+
 
 
 .scrollUpArrowWrapper a:hover .scrollUpArrow{
     margin-bottom: 5px;
 }
 
+.scrollUpArrowWrapper a:hover .scrollUpArrow path{
+    fill: var(--color-accent)
+}
+
 .scrollUpArrowWrapper a:active .scrollUpArrow{
     margin-bottom: 5px;
+}
+
+.scrollDownArrowLink .arrow path{
+    fill: var(--color-white);
+}
+.scrollDownArrowLink:hover .arrow path{
+    fill: var(--color-accent);
 }
 
 .navMediaIcons div{
     padding-top: 80px;
 }
 
-#mediaIconIg{
-    background-image: url(../vectors/InstagramIcon.svg);
+
+
+.mediaIconVisual path{
+    fill: var(--color-white);
 }
 
-#mediaIconLinkedin{
-    background-image: url(../vectors/LinkedInIcon.svg);
+.mediaIconLink:hover .mediaIconVisual path{
+    fill: var(--color-accent);
 }
 
-#mediaIconMail{
-    background-image: url(../vectors/GmailIcon.svg);
-    
+.mediaIconLink svg path{
+    fill: var(--color-white);
+}
+.mediaIconLink:hover svg path{
+    fill: var(--color-accent);
 }
 
-.mediaIconVisual{
-    background: var(--color-white);
-    background: radial-gradient(circle, var(--color-accent) 0%, var(--color-accent) 0.1%, var(--color-white) 0.1%);
-    background-size: 100%;
-    background-position: center;
-    background-repeat:no-repeat;
-    transition: all 0.3s;
-}
-/* 
-.mediaIconLink:hover .mediaIconVisual{
-
-    background-size: 140000%;
-}
-.mediaIconLink p{
-    transition: color 0.3s;
-}
 .mediaIconLink:hover p{
     color: var(--color-accent);
-} */
+}
 
 
 .heroSection{
@@ -549,10 +548,10 @@ nav ul a:hover li{
 
 .contentWrapperYT{
     margin-bottom: var(--margin-topandbot-contentWrapper);
-    margin-left: var(--margin-inline-contentWrapper) ;
+    margin-left: var(--margin-inline-contentWrapper);
     margin-right: var(--margin-inline-contentWrapper);
     max-width: 1400px;
-    width: 100%;
+    width: calc(100% - (var(--margin-inline-contentWrapper) *2));
 }
 
 .contentWrapperFooter{
@@ -1158,5 +1157,4 @@ hr{
         padding: 10px;
     }
 }
-
 
