@@ -69,7 +69,7 @@ h1{
     font-size: 150px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
+    line-height: 95%;
     letter-spacing: 6px;
     margin: 0;
 }
